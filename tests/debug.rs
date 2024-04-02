@@ -1,4 +1,4 @@
-use stellar_strkey::*;
+use diamnet_strkey::*;
 
 extern crate proptest;
 

@@ -1,4 +1,4 @@
-use stellar_strkey::*;
+use diamnet_strkey::*;
 
 extern crate proptest;
 
@@ -118,7 +118,7 @@ fn test_valid_muxed_ed25519() {
 #[test]
 fn test_invalid_muxed_ed25519() {
     // TODO: This test case is supposed to fail, but it will pass, I think this is the responsibility of the base32 lib
-    // maybe related to https://github.com/stellar/rs-stellar-strkey/issues/10
+    // maybe related to https://github.comdiamcircle/rs-diamnet-strkey/issues/10
     // The unused trailing bit must be zero in the encoding of the last three bytes (24 bits) as five base-32 symbols (25 bits)
     // let r = Strkey::from_string("MA7QYNF7SOWQ3GLR2BGMZEHXAVIRZA4KVWLTJJFC7MGXUA74P7UJUAAAAAAAAAAAACJUR");
     // assert_eq!(r, Err(DecodeError::Invalid));
@@ -246,7 +246,7 @@ fn test_signed_payload_from_string_doesnt_panic_with_unbounded_size() {
         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
         0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     ];
-    let r = stellar_strkey::ed25519::SignedPayload::from_payload(&payload);
+    let r = diamnet_strkey::ed25519::SignedPayload::from_payload(&payload);
     assert_eq!(r, Err(DecodeError::Invalid));
 }
 

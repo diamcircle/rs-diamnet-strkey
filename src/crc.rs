@@ -9,18 +9,18 @@
 // Xor constant to output CRC : 0000
 // Output for "123456789"     : 31C3
 //
-// Ported from the Go code in the stellar/go codebase:
-// https://github.com/stellar/go/blob/229fb05c5aa7183d57ecec1a0f8165bcd17d445f/strkey/internal/crc16/main.go
+// Ported from the Go code in the diamnet/go codebase:
+// https://github.com/diamnet/go/blob/229fb05c5aa7183d57ecec1a0f8165bcd17d445f/strkey/internal/crc16/main.go
 //
-// Originally ported from the C++ code in the stellar-core codebase:
-// https://github.com/stellar/stellar-core
+// Originally ported from the C++ code in the diamnet-core codebase:
+// https://github.com/diamnet/diamnet-core
 //
 // The code is licensed as:
 /*
  * Copyright 2001-2010 Georges Menie (www.menie.org)
  * Copyright 2010-2012 Salvatore Sanfilippo (adapted to Redis coding style)
- * Copyright 2015 Stellar Development Foundation (ported to go)
- * Copyright 2022 Stellar Development Foundation (ported to rust)
+ * Copyright 2015 Diamnet Development Foundation (ported to go)
+ * Copyright 2022 Diamnet Development Foundation (ported to rust)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

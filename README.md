@@ -1,6 +1,6 @@
-# rs-stellar-strkey
+# rs-diamnet-strkey
 
-Library and CLI containing types and functionality for working with Stellar
+Library and CLI containing types and functionality for working with Diamnet
 Strkeys.
 
 **This repository contains code that is in early development, incomplete,
@@ -13,7 +13,7 @@ and is receiving breaking changes frequently.**
 To use the library, include in your toml:
 
 ```toml
-stellar-strkey = "..."
+diamnet-strkey = "..."
 ```
 
 #### CLI
@@ -21,20 +21,20 @@ stellar-strkey = "..."
 To use the CLI:
 
 ```console
-cargo install --locked stellar-strkey --version ... --features cli
+cargo install --locked diamnet-strkey --version ... --features cli
 ```
 
 ##### Examples
 
 Decode a `G` account/public-key strkey:
 ```console
-$ stellar-strkey decode GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWHF
+$ diamnet-strkey decode GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWHF
 PublicKeyEd25519(PublicKey(0000000000000000000000000000000000000000000000000000000000000000))
 ```
 
 Decode a `C` contract strkey:
 ```console
-$ stellar-strkey decode CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABSC4
+$ diamnet-strkey decode CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABSC4
 Contract(Contract(0000000000000000000000000000000000000000000000000000000000000000))
 ```
 

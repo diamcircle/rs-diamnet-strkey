@@ -1,7 +1,7 @@
 use std::str::FromStr;
 
 use clap::Args;
-use stellar_strkey::DecodeError;
+use diamnet_strkey::DecodeError;
 
 #[derive(thiserror::Error, Debug)]
 pub enum Error {
@@ -19,7 +19,7 @@ pub struct Cmd {
 
 impl Cmd {
     pub fn run(&self) -> Result<(), Error> {
-        let strkey = stellar_strkey::Strkey::from_str(&self.strkey)
+        let strkey = diamnet_strkey::Strkey::from_str(&self.strkey)
             .map_err(|e| Error::Decode(self.strkey.clone(), e))?;
         println!("{strkey:?}");
         Ok(())

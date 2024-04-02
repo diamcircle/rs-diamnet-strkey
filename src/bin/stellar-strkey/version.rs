@@ -6,7 +6,7 @@ pub struct Cmd;
 
 impl Cmd {
     pub fn run() {
-        let v = stellar_strkey::VERSION;
-        println!("stellar-strkey {} ({})", v.pkg, v.rev);
+        let v = diamnet_strkey::VERSION;
+        println!("diamnet-strkey {} ({})", v.pkg, v.rev);
     }
 }
